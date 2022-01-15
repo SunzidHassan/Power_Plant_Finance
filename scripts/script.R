@@ -45,4 +45,6 @@ while (n < (constants$repayment_period+1)) {
      n <- n+1
 }
 
-LUEC <- 
+
+LUEC <- ((constants$investment + totalintPV + total_cost + constants$decommissioning_and_waste_cost * 125)
+          / (present_value_electricity * variables$plant_capacity_factor))
