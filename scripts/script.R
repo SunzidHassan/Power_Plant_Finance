@@ -1,5 +1,9 @@
 library(readxl)
 
+
+constants -> read.csv("input/constants.csv",
+                               stringsAsFactors = F, header = T, comment.char = "")
+
 plant_capacity = 2400
 investment = 11400000000
 plant_lifetime = 60
