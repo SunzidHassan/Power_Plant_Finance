@@ -1,2 +1,2 @@
 construction_years,discount_rate,operation_maintenance_cost,fuel_cost,plant_capacity_factor,bd_inflation_rate,us_inflation rate,bd_us_exchange_rate,
-6,0.1,7.82,4.5,,0.85,0.06,0.02,80
+6,0.1,7.82,4.5,0.92,0.85,0.06,0.02,80

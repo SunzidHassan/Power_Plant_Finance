@@ -1,6 +1,3 @@
-library(readxl)
-
-
 constants <- read.csv("input/constants.csv",
                                stringsAsFactors = F, header = T, comment.char = "")
 
@@ -46,5 +43,5 @@ while (n < (constants$repayment_period+1)) {
 }
 
 
-LUEC <- ((constants$investment + totalintPV + total_cost + constants$decommissioning_and_waste_cost * 125)
-          / (present_value_electricity * variables$plant_capacity_factor))
+LUEC <- ((constants$investment + totalintPV + total_cost + constants$decommissioning_and_waste_cost)
+          / (present_value_electricity * variables$plant_capacity_factor * 100))
