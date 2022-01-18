@@ -1,2 +1,2 @@
-plant_capacity,investment,plant_lifetime,interest,repayment_period,tax_rate,discount_rate,decommissioning_and_waste_cost,annual_electricity_generation
-2400,11400000000,60,0.04,28,0.25,0.1,1000000000,21024000
+plant_capacity,investment,plant_lifetime,interest_rate,repayment_period,tax_rate,decommissioning_and_waste_cost
+2400,11400000000,60,0.04,28,0.25,1000000000
