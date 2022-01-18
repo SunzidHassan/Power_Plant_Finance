@@ -1,18 +1,26 @@
-#Read constants and variables of power plant
+###Libraries####
 
-constants <- read.csv("input/constants.csv",
-                               stringsAsFactors = F, header = T, comment.char = "")
 
-variables <- read.csv("input/variables.csv",
-                      stringsAsFactors = F, header = T, comment.char = "")
+###Functions####
 
-##common variables####
+# PV_lifetime_costs_of_capital
+# > capital payment: investment amount, repayment_period, discount_rate
+# > interest payment: interest_rate, discount_rate, repayment_period, investment amount
 
-#yearly operation hour
-yearly_operation_hour <- variables$yearly_operation_hour * variables$yearly_operation_days
+# PV_lifetime_unit_variable_cost
+# > operation cost: plant_capacity, plant_capacity_factor,
+#                        operation_maintenance_cost, yearly_operation_hour, yearly_operation_days,
+#                       plant_lifetime, discount_rate
+# > fuel cost: fuel_cost
+
+# constants$decommissioning_and_waste_cost
+
+# PV_lifetime_unit_electricity_price_factor
+# > plant_capacity, plant_capacity_factor, yearly_operation_hour, plant_lifetime_discount_factor
+
+
 
 #discount factor function
-
 discount_factor <- function(time, rate){
         n <- 1
         discount <- 1
@@ -23,7 +31,7 @@ discount_factor <- function(time, rate){
         return(discount)
 }
 
-#discounted_sum function
+#discounted sum function
 discounted_sum <- function(int_rate, disc_rate, time, starting_amount, step_change){
         left <- starting_amount
         n <- 1
@@ -37,6 +45,22 @@ discounted_sum <- function(int_rate, disc_rate, time, starting_amount, step_chan
         }
         return(sum)
 }
+
+
+
+#Read constants and variables of power plant
+
+constants <- read.csv("input/constants.csv",
+                               stringsAsFactors = F, header = T, comment.char = "")
+
+variables <- read.csv("input/variables.csv",
+                      stringsAsFactors = F, header = T, comment.char = "")
+
+##common variables####
+
+#yearly operation hour
+yearly_operation_hour <- variables$yearly_operation_hour * variables$yearly_operation_days
+
 
 #plant lifetime discount factor
 plant_lifetime_discount_factor <- discount_factor(constants$plant_lifetime,
@@ -94,12 +118,14 @@ LUEC <- ((PV_lifetime_costs_of_capital + PV_lifetime_unit_variable_cost + consta
 
 #the result is $51.16 (BDT 4.34/unit), whereas the official value is $56.73
 
+#further analysis
+
 #Break even
 
+#Weighted Average Cost of Capital: it's entirely debt financed, so the cost of debt is the fixed WACC
 
-#internal rate of return
+#IF price of per unit electricity is greater than LUEC, then how long will it take to cover fixed costs?
 
-
-#Weighted Average Cost of Capital
+#internal rate of return: return percentage against investment
 
 
