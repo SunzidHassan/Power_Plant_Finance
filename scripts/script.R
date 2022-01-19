@@ -128,4 +128,4 @@ LUEC <- ((PV_lifetime_costs_of_capital + PV_lifetime_unit_variable_cost + consta
 
 #internal rate of return: return percentage against investment
 
-
+#in the end: add rm()
