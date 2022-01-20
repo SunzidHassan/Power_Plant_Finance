@@ -8,7 +8,7 @@ This project uses fixed and variable costs of a Nuclear power plant, and generat
 - Internal Rate of Return of project
 etc.
 
-\n
+
 
 Files:
 - The 'input' folder contains files for constant and variable costs of the power plant.
