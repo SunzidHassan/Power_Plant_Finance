@@ -10,9 +10,9 @@ etc.
 
 
 Files:
-The 'input' folder contains files for constant and variable costs of the power plant.
-The impact of change in the variable inputs (e.g., cost of fuel, plant efficiency, hour of operation etc.) will be available in the 'output' folder.
-The 'script' folder contains the code.
+- The 'input' folder contains files for constant and variable costs of the power plant.
+-The impact of change in the variable inputs (e.g., cost of fuel, plant efficiency, hour of operation etc.) will be available in the 'output' folder.
+- The 'script' folder contains the code.
 
 
 Calculation assumptions:
