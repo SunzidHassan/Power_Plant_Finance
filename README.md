@@ -9,6 +9,8 @@
 etc.
 
 
+##Use case
+While this project is based on financial analysis of nuclear power plant, it can be used to conduct financial analysis of any investment decision/project.
 
 ## Files:
 - The 'input' folder contains files for constant and variable costs of the power plant.
