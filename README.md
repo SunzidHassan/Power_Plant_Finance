@@ -9,7 +9,7 @@
 etc.
 
 
-## Use case
+## Use case:
 While this project is based on financial analysis of nuclear power plant, it can be used to conduct financial analysis of any investment decision/project.
 
 ## Files:
