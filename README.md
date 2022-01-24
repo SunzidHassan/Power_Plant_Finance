@@ -1,11 +1,12 @@
 # Power_Plant_Financing Project
 
 
-## This project uses fixed and variable costs of a Nuclear power plant, and generates financial indicator values such as:
-- Levelized unit energy cost
-- Break even year of project
-- Net Present Value of project
-- Internal Rate of Return of project
+## This project uses fixed and a range of variable costs of a Nuclear power plant. Given the range of variable costs, the code generates financial indicator values such as:
+- Levelized unit energy cost.
+- Weight Average Cost of Capital (WACC) of the project.
+- Net Present Value (NPV) of project.
+- Internal Rate of Return (IRR) of project
+- Pay back period and Break even point of project.
 etc.
 
 
